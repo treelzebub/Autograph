@@ -17,7 +17,7 @@ class OkHttpResponseAdapter(private val response: Response) : HttpResponse {
         return response.body()?.byteStream()
     }
 
-    override fun getReasonPhrase(): String {
+    override fun getReasonPhrase(): String? {
         return response.message()
     }
 

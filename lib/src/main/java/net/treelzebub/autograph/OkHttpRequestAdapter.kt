@@ -12,7 +12,7 @@ import java.io.InputStream
  */
 class OkHttpRequestAdapter(private var request: Request) : HttpRequest {
 
-    override fun getAllHeaders(): Map<String, String> {
+    override fun getAllHeaders(): Map<String, String>? {
         val headers = mutableMapOf<String, String>()
         request.headers().names().forEach {
             headers.put(it, request.header(it))
@@ -27,7 +27,7 @@ class OkHttpRequestAdapter(private var request: Request) : HttpRequest {
         } else null
     }
 
-    override fun getHeader(key: String): String {
+    override fun getHeader(key: String): String? {
         return request.header(key)
     }
 
@@ -40,11 +40,11 @@ class OkHttpRequestAdapter(private var request: Request) : HttpRequest {
         }
     }
 
-    override fun getMethod(): String {
+    override fun getMethod(): String? {
         return request.method()
     }
 
-    override fun getRequestUrl(): String {
+    override fun getRequestUrl(): String? {
         return request.url().toString()
     }
 
