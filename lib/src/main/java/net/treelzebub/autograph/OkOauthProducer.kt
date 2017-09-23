@@ -10,7 +10,7 @@ import okhttp3.Request
 /**
  * Created by treelzebub on 9/23/2017
  */
-class OauthProducer @JvmOverloads constructor(
+class OkOauthProducer @JvmOverloads constructor(
         requestTokenEndpointUrl: String,
         accessTokenEndpointUrl: String,
         authorizationWebsiteUrl: String,
